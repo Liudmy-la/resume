@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{page}}</title>
+        <meta charset='utf-8' />
+        <link href='css/index.css' rel='stylesheet' />
+    </head>
+{{{body}}}  
+    <footer>
+        <br>
+        <hr>
+        <br>
+        <div>
+        <i>Other Pages:</i> 
+        {{> link text="Person" href="/person" line=true}}
+        {{> link text="Bio" href="/bio" line=true}}
+        {{> link text="Program" href="/program" line=true}}
+        {{> link text="Web" href="/web" noLine=true}}
+        </div>
+    </footer>
+</html>
