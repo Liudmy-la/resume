@@ -1,0 +1,110 @@
+<div>
+    {{> title data="About Car" big=true}}
+    <div><big>{{make}} {{model}}</big> of {{year}} <i>(color: {{color}})</i></div>
+    <br>
+        {{#with price}}
+        <div><big>Base Price: {{base}}</big></div>
+        <div>Destination: {{destination}}</div>
+        <br>
+            <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width:300px">
+                    Options
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Navigation: 1200</a></li>
+                    <li><a class="dropdown-item" href="#">Moonroof: 800</a></li>
+                    <li><a class="dropdown-item" href="#">Premium paint: 595</a></li>
+                </ul>
+            </div>
+        {{/with}}
+    <br><hr><br>
+    <div>
+        {{> title data='Features' big=false}}
+        <br>
+        {{#with features}}
+            {{#with interior}}
+                {{#with seats}}
+                <div><big>Seats</big></div>
+                <ul>                 
+                    <li>material: <b>{{material}}</b></li>
+                    <li>color: <b>{{color}}</b></li>
+                    <li>{{#if heated}} <i> with heated option</i> {{/if}}</li>
+                    <li>{{#if ventilated}} <i> with ventilated option</i> {{/if}}</li>
+                </ul>
+                {{/with}}
+                <br>
+                {{#with dashboard}}
+                <div><big>Dashboard</big></div>
+                    <ul>
+                        <li>material: <b>{{material}}</b></li>
+                        <li>color: <b>{{color}}</b></li>
+                        <li>display:
+                            {{#with display}}
+                                <div><b>{{type}} {{size}}</b></div>
+                                <div><b>{{resolution}}</b></div>
+                                {{#if touchscreen}} <i>with touchscreen option</i> {{/if}}
+                            {{/with}}
+                        </li>
+                    </ul>
+                {{/with}}
+                <br>
+                {{#with audio}}
+                <div><big>Audio</big></div>
+                    <ul>
+                        <li>system: <b>{{system}}</b> <i>(<b>{{speakers}}</b> speakers)</i></li>
+                        <li>{{#if subwoofer}} <i>with subwoofer</i> {{/if}}</li>
+                        <li>{{#if bluetooth}} <i>with bluetooth</i> {{/if}}</li>
+                        <li>{{#if USB}} <i>with USB</i> {{/if}}</li>
+                    </ul>
+                {{/with}} 
+            {{/with}}
+        {{/with}}
+    </div>
+
+    <br><hr><br>
+    <div>
+        {{> title data='Engine' big=false}}
+        {{#with engine}}
+        <table class="table table-striped">
+            <tr> 
+                <th>type</th>
+                <td>{{type}}</td>                
+            </tr>
+            <tr>
+                <th>displacement</th>
+                <td>{{displacement}}</td>
+            </tr>
+            <tr>
+                <th>horsepower</th>
+                <td>{{horsepower}}</td>
+            </tr>
+            <tr>
+                <th>torque</th>
+                <td>{{torque}}</td>
+            </tr>
+            <tr>
+                <th>transmission</th>
+                <td>
+                    <div>type: {{transmission.type}}</div>
+                    <div>gears: {{transmission.gears}}</div>
+                </td>
+            </tr>
+            
+        </table>      
+        {{/with}}
+    </div>
+
+    <br>
+    <div>
+        {{> title data='Fuel economy' big=false}}
+        {{#with fuel_economy}}
+        <ul class="list-group" style="width:300px">
+            <li class="list-group-item active" aria-current="true">City: {{city}}</li>
+            <li class="list-group-item">Highway: {{highway}}</li>
+            <li class="list-group-item">Combined: {{combined}}</li>
+        </ul>
+        {{/with}}
+    </div>
+
+</div>
+    
