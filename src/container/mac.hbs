@@ -1,0 +1,115 @@
+<div>
+    {{> title data=name big=true}}
+    <div><i>{{category}}</i></div>
+    <div><i><big>{{description}}</big></i></div>
+    <br>
+    <div class="d-grid gap-2">
+        <button class="btn btn-success" type="button"><big>Buy now: {{price}}</big></button>
+    </div>
+    <br><hr><br>
+    {{#with features}}
+        <div>
+            {{#with dimensions}}
+            <ul class="list-group list-group-flush" align="center">
+                <li class="list-group-item"><i>Weight:</i> {{../weight}}</li>
+                <li class="list-group-item"><i>Height:</i> {{height}}</li>
+                <li class="list-group-item"><i>Width:</i> {{width}}</li>
+                <li class="list-group-item"><i>Depth:</i> {{depth}}</li>                
+            </ul>
+            {{/with}}
+        </div>
+    <br><hr><br>   
+    {{> title data="Features" big=false}}    
+    <br>
+    <div>Operating system: <b>{{operating_system}}</b></div>
+    <br>
+    <div>        
+        <table class="table table-striped-columns">
+            <tr align="center" bgcolor="#9cd5ba"> 
+                <th>Processor</th>
+                <th>Memory</th>
+                <th>Storage</th>
+                <th>Battery</th>     
+            </tr>
+            <tr> 
+                <td>
+                    {{#with processor}}
+                    <p>brand: <b>{{brand}}</b></p>
+                    <p>model: <b>{{model}}</b></p>
+                    <p>speed: <b>{{speed}}</b></p>
+                    <p>cores: <b>{{cores}}</b></p>
+                    <p>cache: <b>{{cache}}</b></p>
+                    {{/with}}
+                </td>
+                <td>
+                    {{#with memory}}
+                    <p>type: <b>{{type}}</b></p>
+                    <p>size: <b>{{size}}</b></p>
+                    <p>speed: <b>{{speed}}</b></p>
+                    {{/with}}
+                </td>
+                <td>
+                    {{#with storage}}
+                    <p>type: <b>{{type}}</b></p>
+                    <p>size: <b>{{size}}</b></p>                    
+                    {{/with}}
+                </td>                
+                <td>
+                    {{#with battery}}
+                    <p>type: <b>{{type}}</b></p>
+                    <p>capacity: <b>{{capacity}}</b></p>
+                    <p>life: <b>{{life}}</b></p>
+                    {{/with}}
+                </td>     
+            </tr>
+        </table>      
+    <br>
+    <div>
+        <p><big><b>Ports:</b></big></p>
+        {{#each ports}}
+        <ul>
+            <li>
+                <div><i>type:</i> <b>{{type}}</b></div>
+                <div><i>count:</i> <b>{{count}}</b></div>
+                <div> {{#if features}}<i>features:</i>{{/if}}
+                    {{#each features}}
+                    <ul><li>{{this}}</li></ul>
+                    {{/each}}
+                </div>
+            </li>
+        </ul>
+        {{/each}}
+    </div>    
+<br>    
+    <div>
+        <p><big><b>Display:</b></big></p>
+        {{#with display}}
+            <ul>
+                <div><i>brand:</i> <b>{{brand}}</b></div>
+                <div><i>model:</i> <b>{{model}}</b></div>
+                <div><i>memory:</i> <b>{{memory}}</b></div>
+            </ul>
+        {{/with}}
+        {{#with display_param}}
+            <ul>
+                <div><i>size:</i> <b>{{size}}</b></div>
+                <div><i>resolution:</i> <b>{{resolution}}</b></div>
+                <div><i>technology:</i> <b>{{technology}}</b></div>
+                <div><i>color_space:</i> <b>{{color_space}}</b></div>
+                <div><i>brightness:</i> <b>{{brightness}}</b></div>
+                <div><i>refresh_rate:</i> <b>{{refresh_rate}}</b></div>
+            </ul>
+        {{/with}}
+    </div>
+<br><hr><br> 
+ 
+        <div>
+            {{> title data="Accessories" big=false}}
+            {{#each accessories}}        
+            <ul class="list-group">
+                <li class="list-group-item"><b>{{name}}</b> _<i>{{price}}</i></li>                
+            </ul>
+            {{/each}}
+        </div>
+    {{/with}}
+</div>
