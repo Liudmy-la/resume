@@ -1,0 +1,96 @@
+<div>
+{{> title data="Facebook" big=true}}
+{{#each users}}
+<ul>
+    <li>
+        <ul class="list-group" align="center">
+            <li class="list-group-item"><i>({{id}})</i> <big><b>{{name}}</b></big></li>
+            <li class="list-group-item"><i>{{gender}}</i> - {{age}} years</li>
+        </ul>
+        <br>
+        <div><b><big>Friends:</big></b></div>
+        {{#each friends}}
+            <ul>
+                <li>
+                    <div><i><small>({{id}})</small></i> <ins>{{name}}</ins></div>
+                    <div><i>{{gender}}</i> - {{age}} years</div>
+                    <br>
+                    <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <i>Mutual friends:</i>
+                        </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            {{#each mutual_friends}}
+                                <ul>
+                                    <li>
+                                        <div><i><small>({{id}})</small></i> <ins>{{name}}</ins></div>
+                                        <div><i>{{gender}}</i> - {{age}} years</div>
+                                    </li>
+                                    <br>
+                                </ul>
+                            {{/each}}
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <br>
+                    <div>{{#if groups}}<b><i>Groups:</i></b>{{/if}}
+                        {{#each groups}}
+                            <ul>
+                                <li>
+                                    <div><i><small>({{id}})</small></i><ins> {{name}}</ins></div>
+                                    <div><i> - {{description}}</i></div>
+                                    <br>
+                                    <div> Members:
+                                        {{#each members}}
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div><i><small>({{id}})</small></i> {{name}}</div>
+                                                <div><i>{{gender}}</i> - {{age}} years</div>                                                
+                                            </li>
+                                            <br>
+                                        </ul>
+                                        {{/each}}
+                                    </div>
+                                </li>
+                            </ul>
+                        {{/each}}
+                    </div>
+
+                </li>
+            </ul>
+        {{/each}}
+<br><hr><br>
+        {{#if groups}}<div><b><big>Groups:</big></b></div>{{/if}}
+        {{#each groups}}
+            <ul>
+                <li>
+                    <div><i><small>({{id}})</small></i><ins> {{name}}</ins></div>
+                    <div><i> - {{description}}</i></div>
+                    <br>
+                    <div>Members:
+                        {{#each members}}
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div><i><small>({{id}})</small></i> {{name}}</div>
+                                <div><i>{{gender}}</i> - {{age}} years</div>
+                            </li>
+                            <br>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </li>
+                <br>
+            </ul>
+        {{/each}}
+        <br>
+    </li>
+    <hr><br>
+</ul>
+{{/each}}
+</div>
+
