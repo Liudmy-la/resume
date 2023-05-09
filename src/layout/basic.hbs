@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
          <style>
-            div {margin-left: 25px;}
+            main {margin-left: 30px;}
          </style>
         
         <link href='css/index.css' rel='stylesheet' />
@@ -26,12 +26,19 @@
         {{> link text="Person" href="/person" line=true}}
         {{> link text="Bio" href="/bio" line=true}}
         {{> link text="Program" href="/program" line=true}}
-        {{> link text="Web" href="/web" line=true}}
+        {{> link text="Web" href="/web" noLine=true}}        
+        </div>
+        <div>
+        <i>Pages vs using bootstrap:</i> 
         {{> link text="JS" href="/js" line=true}}
         {{> link text="Car" href="/car" line=true}}
         {{> link text="Mac" href="/mac" line=true}}
         {{> link text="Facebook" href="/facebook" noLine=true}}
-        
+        </div>
+        <div>
+        <i>Pages by Copied design:</i> 
+        {{> link text="Task 2-1" href="/task21" noLine=true}}
+
         </div>
     </footer>
 </html>
