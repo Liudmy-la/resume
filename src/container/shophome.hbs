@@ -1,0 +1,119 @@
+<main>
+    <section class="p-0">
+    {{#with navigation}}
+        <div class="card p-2">
+            <div class="nav">
+            {{#each links}}
+                <div class="nav-item">
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                </div>                
+            {{/each}}
+                <div class="nav-item">
+                    <a href="" class="nav-link disabled">Disabled</a>
+                </div>                
+            </div>
+        </div>
+    {{/with}}
+    </section>
+
+    <section>
+    {{#with newsBlock}}
+        <h2 class="my-3 text-center">{{title}}</h2>
+        <div class="row  gx-2 gy-3">            
+        {{#each cards}}
+            <div class="col-3">
+                <div class="card text-bg-dark">
+                <div class="card-header">
+                    <span class="my-2">{{title}}</span>
+                    {{#if isTop}}<span class="badge text-bg-success rounded-pill mx-2">New</span>{{/if}}
+                    {{#if isTop}}<span class="badge text-bg-danger rounded-pill">TOP</span>{{/if}}
+                </div>
+                <div class="card-body">
+                    <span>{{description}}</span>
+                </div>
+            </div>
+            </div>
+        {{/each}}            
+        </div>
+    {{/with}}
+    </section>
+    <hr>
+    <section>
+    {{#with goodsBlock}}
+        <div class="nav nav-tabs my-4">
+        {{#each tabs}}
+            <div class="nav-item">
+                <a href="" class="nav-link {{#if isActive}}active{{/if}} {{#if isDisabled}}disabled{{/if}}"><b>{{text}}</b></a>
+            </div>
+        {{/each}}
+        </div>
+        <div class="row gx-2 gy-4">
+            {{#each cards}}
+                <div class="col-4">
+                    <div class="card text-bg-light">
+                        <img src="{{image}}" alt="image cup" class="card-img-top">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <span class="h5  my-2">{{title}}</span>
+                                {{#if isHot}}<span class="badge text-bg-warning rounded-pill mx-2">HOT!</span>{{/if}}
+                                {{#if isNew}}<span class="badge text-bg-primary rounded-pill">New</span>{{/if}}                                
+                            </div>
+                            <span>{{description}}</span>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    {{/with}}
+    </section>
+    <hr>
+    <section>
+    {{#with subscribe}}
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-bg-dark">
+                    <h2 class="ms-2 my-3">{{header}}</h2>
+                    <p class="ms-2">{{description}}</p>
+                    {{#each buttons}}                    
+                        <a href="{{link}}" target="_blank" class="btn btn-primary col-3 m-2 mt-0">{{text}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    {{/with}}
+    </section>
+    <hr>
+    <section>
+    {{#with service}}
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-bg-success text-center">
+                    <h2 class="my-3">{{title}}</h2>
+                    <p>{{description}}</p>
+                    <div class="center">
+                    {{#each buttons}}
+                        <a href="{{link}}" target="_blank" class="btn btn-primary col-3 mb-2">{{text}}</a>
+                    {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+    </section>
+    <hr>
+    <section>
+        <div class="row">
+        {{#each footer}}                     
+            <div class="col-2">
+                <div class="nav flex-column">
+                {{#each this}}
+                    <div class="nav-item">
+                        <a href="{{link}}" target="_blank" class="nav-link {{#if isDisabled}}disabled{{/if}}">{{text}}</a>
+                    </div>                    
+                {{/each}}
+                </div>
+            </div>       
+        {{/each}}
+        </div>
+    </section>
+</main>
