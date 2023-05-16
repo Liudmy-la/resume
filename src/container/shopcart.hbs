@@ -1,0 +1,78 @@
+<main>
+    <object>
+        {{#with header}}
+            <h1 class="my-4">{{title}}</h1>
+                {{#with button}}
+                <a href="{{link}}" target="_blank" class="btn btn-outline-secondary mb-3">{{text}}</a>
+                {{/with}}
+        {{/with}}
+    </object>
+    <hr>
+    <object>
+        {{#each goodsBlock}}
+        <div class="card ps-2 py-1 my-4">
+            <div class="row">
+                <div class="col-2 ps-4 pe-0">
+                    <img src="{{image}}" alt="{{name}}">
+                </div>
+                <div class="col-4 px-0">
+                    <div class="h4 mb-0">{{name}}</div>
+                    <div>{{description}}</div>
+                </div>
+                <div class="col-2">
+                {{#with price}}
+                    <div class="mt-4">{{title}}:</div>
+                    <div class="h4">{{value}}</div>
+                {{/with}}
+                </div>
+                <div class="col-2">
+                    <div class="mt-5">{{amount}}</div>
+                </div>
+                <div class="col-2">
+                    {{#each buttons}}
+                        <div>
+                            <button class="btn
+                                {{#if isPrimary}} btn-primary {{/if}}
+                                {{#if isDanger}} btn-outline-danger {{/if}}
+                                mt-2">
+                                    {{text}}
+                            </button>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </object>
+    <hr>
+    <object>
+        {{#with total}}
+            <div class="h3 mt-5">{{title}}</div>
+            <div class="h1">{{amount}}</div>
+            <div class="mb-4">{{delivery}}</div>
+                {{#each buttons}}
+                    <div>
+                        <button class="btn
+                        {{#if isSuccess}} btn-success {{/if}}
+                        {{#if isOutline}} btn-outline-success {{/if}}
+                        mb-3">
+                            {{text}}
+                        </button>
+                    </div>
+                {{/each}}
+        {{/with}}
+    </object>
+    <hr>
+    <object>
+        {{#with goodsOtherBlock}}
+            <div class="text-center h3 my-4">{{title}}</div>
+            <div class="row gy-4 gx-2 mb-5">
+                {{> cardimg}}            
+            </div>
+        {{/with}}
+    </object>
+    <hr>
+    <object>        
+        {{> darksubscr}}
+    </object>
+</main>
