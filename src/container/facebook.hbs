@@ -7,14 +7,13 @@
             <li class="list-group-item"><i>({{id}})</i> <big><b>{{name}}</b></big></li>
             <li class="list-group-item"><i>{{gender}}</i> - {{age}} years</li>
         </ul>
-        <br>
-        <div><b><big>Friends:</big></b></div>
+        <div class="mt-5"><b><big>Friends:</big></b></div>
         {{#each friends}}
             <ul>
                 <li>
                     <div><i><small>({{id}})</small></i> <ins>{{name}}</ins></div>
-                    <div><i>{{gender}}</i> - {{age}} years</div>
-                    <br>
+                    <div class="mb-5"><i>{{gender}}</i> - {{age}} years</div>
+                    
                     <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -26,38 +25,33 @@
                         <div class="accordion-body">
                             {{#each mutual_friends}}
                                 <ul>
-                                    <li>
+                                    <li class="mb-3">
                                         <div><i><small>({{id}})</small></i> <ins>{{name}}</ins></div>
                                         <div><i>{{gender}}</i> - {{age}} years</div>
                                     </li>
-                                    <br>
                                 </ul>
                             {{/each}}
                         </div>
                         </div>
                     </div>
                     </div>
-                    <br>
-                    <div>{{#if groups}}<b><i>Groups:</i></b>{{/if}}
+                    <div class="mt-5">{{#if groups}}<b><i>Groups:</i></b>{{/if}}
                         {{#each groups}}
                             <ul>
-                                <li>
+                                <li class="mb-4">
                                     <div><i><small>({{id}})</small></i><ins> {{name}}</ins></div>
                                     <div><i> - {{description}}</i></div>
-                                    <br>
-                                    <div> Members:
+                                    <div class="mt-5"> Members:
                                         {{#each members}}
                                         <ul class="list-group">
-                                            <li class="list-group-item">
+                                            <li class="list-group-item mb-3">
                                                 <div><i><small>({{id}})</small></i> {{name}}</div>
                                                 <div><i>{{gender}}</i> - {{age}} years</div>                                                
                                             </li>
-                                            <br>
                                         </ul>
                                         {{/each}}
                                     </div>
                                 </li>
-                                <br>
                             </ul>
                         {{/each}}
                     </div>
@@ -65,32 +59,28 @@
                 </li>
             </ul>
         {{/each}}
-<br><hr><br>
+<hr class="my-5">
         {{#if groups}}<div><b><big>Groups:</big></b></div>{{/if}}
         {{#each groups}}
-            <ul>
-                <li>
+            <ul class="mb-4">
+                <li class="mb-4">
                     <div><i><small>({{id}})</small></i><ins> {{name}}</ins></div>
                     <div><i> - {{description}}</i></div>
-                    <br>
-                    <div>Members:
+                    <div class="mt-5">Members:
                         {{#each members}}
                         <ul class="list-group">
-                            <li class="list-group-item">
+                            <li class="list-group-item mb-3">
                                 <div><i><small>({{id}})</small></i> {{name}}</div>
                                 <div><i>{{gender}}</i> - {{age}} years</div>
                             </li>
-                            <br>
                         </ul>
                         {{/each}}
                     </div>
                 </li>
-                <br>
             </ul>
         {{/each}}
-        <br>
     </li>
-    <hr><br>
+    <hr class="my-5">
 </ul>
 {{/each}}
 </main>

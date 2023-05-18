@@ -6,19 +6,18 @@
 <html>
     <head>
     <title>
-      {{page.title}}
+      {{page}}
     </title>
     <meta charset='utf-8' />
+     
+        <link href='css/index.css' rel='stylesheet' />
 
-    <style>
-        main {margin-left: 25px;}
-    </style>
-
-    <link href='css/index.css' rel='stylesheet' />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
 			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        
+        <link href='css/style.css' rel='stylesheet' />
     </head>
   
     <body>
@@ -29,36 +28,28 @@
             </div>
             <div>
                 <b>{{position}}</b>
-            </div>
-            <br>
-            <div>
-                <em>
-                    {{salary}}
-                </em>
-            </div>
-            <br>
-            <div>
+            </div>            
+            <div class="my-5">
+                <em>{{salary}}</em>
+            </div>           
+            <div class="mb-5">
                 <address>{{address}}</address>
-            </div>
-            <br>
-            <hr>
+            </div>            
+        <hr>
         {{/with}}
     </header>
+    
+    {{> nav}}
+    
+    <hr  class="mt-5">
+    {{{body}}}       
+    <hr class="mt-5"> 
 
-    <body>
-        {{> nav}}
-    <br>
-    <hr>
-    </body>
-    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   --}}
-    {{{body}}}   
-    <br>
-    <hr> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
   </body>
 
-    <footer>
-        <br>
+    <footer class="pt-5">
         {{> footer}}
     </footer>
 </html>

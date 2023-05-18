@@ -1,11 +1,9 @@
 <main>
     {{> title data="About Car" big=true}}
     <div><big>{{make}} {{model}}</big> of {{year}} <i>(color: {{color}})</i></div>
-    <br>
         {{#with price}}
-        <div><big>Base Price: {{base}}</big></div>
-        <div>Destination: {{destination}}</div>
-        <br>
+        <div class="mt-5"><big>Base Price: {{base}}</big></div>
+        <div  class="mb-3">Destination: {{destination}}</div>
             <div class="dropdown">
                 <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width:300px">
                     Options
@@ -17,14 +15,13 @@
                 </ul>
             </div>
         {{/with}}
-    <br><hr><br>
+    <hr class="my-5">
     <div>
-        {{> title data='Features' big=false}}
-        <br>
+    {{> title data='Features' big=false}}
         {{#with features}}
             {{#with interior}}
                 {{#with seats}}
-                <div><big>Seats</big></div>
+                <div class="mt-5"><big>Seats</big></div>
                 <ul>                 
                     <li>material: <b>{{material}}</b></li>
                     <li>color: <b>{{color}}</b></li>
@@ -32,9 +29,8 @@
                     <li>{{#if ventilated}} <i> with ventilated option</i> {{/if}}</li>
                 </ul>
                 {{/with}}
-                <br>
                 {{#with dashboard}}
-                <div><big>Dashboard</big></div>
+                <div class="mt-5"><big>Dashboard</big></div>
                     <ul>
                         <li>material: <b>{{material}}</b></li>
                         <li>color: <b>{{color}}</b></li>
@@ -47,9 +43,8 @@
                         </li>
                     </ul>
                 {{/with}}
-                <br>
                 {{#with audio}}
-                <div><big>Audio</big></div>
+                <div class="mt-5"><big>Audio</big></div>
                     <ul>
                         <li>system: <b>{{system}}</b> <i>(<b>{{speakers}}</b> speakers)</i></li>
                         <li>{{#if subwoofer}} <i>with subwoofer</i> {{/if}}</li>
@@ -60,8 +55,7 @@
             {{/with}}
         {{/with}}
     </div>
-
-    <br><hr><br>
+    <hr class="my-5">
     <div>
         {{> title data='Engine' big=false}}
         {{#with engine}}
@@ -88,14 +82,11 @@
                     <div>type: {{transmission.type}}</div>
                     <div>gears: {{transmission.gears}}</div>
                 </td>
-            </tr>
-            
+            </tr>            
         </table>      
         {{/with}}
     </div>
-
-    <br>
-    <div>
+    <div class="mt-5">
         {{> title data='Fuel economy' big=false}}
         {{#with fuel_economy}}
         <ul class="list-group" style="width:300px">

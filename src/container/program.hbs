@@ -7,15 +7,12 @@
             <big>{{../name}} </time> to {{city}}, {{country}} from <time>{{../date}}</big> 
         {{/with}}
     </div>
-    <br>
-    <hr>
-    <br>
+    <hr class="my-5">
     <div>
         {{#with program.[0]}}
         {{> title data=name big=false}}
             <div><ins> to {{type}} for {{duration}} days</ins></div>
-            <br>
-            <div>                
+            <div class="my-5">                
             {{#with details}}
                 <div><i>Details:</i></div>
                 <ul>
@@ -27,12 +24,11 @@
                             on {{address}}, {{city}}, {{country}}
                             {{/with}}
                         </div>
-                        <br>
-                        <div>
+                        <div class="mt-4">
                             <p>Exhibits to seen:</p>
                             {{#each exhibits}}
                             <ul>
-                                <li>
+                                <li class="mb-4">
                                     <div>
                                         "{{name}}" by {{artist}} 
                                         {{#unless artist}} unknown artist {{/unless}}
@@ -40,14 +36,12 @@
                                     <div><i>What is it?</i> {{description}}</div>
                                     <div>{{#if audio_guide}} (with audio guide) {{/if}}</div>
                                 </li>
-                                <br>
                             </ul>
                             {{/each}}
                         </div>
                         {{/with}}
                     </li>
-                    <br>
-                    <li>
+                    <li class="mt-4">
                         {{#with guide}}
                             <div>GUIDE: <b>{{name}}</b> , ({{rating}})</div>
                             <div><i>speak {{language}}</i></div> 
@@ -56,18 +50,14 @@
                 </ul>
             {{/with}}
             </div>
-            <br>
         {{/with}}
     </div>
-    <br>
-    <hr>
-    <br>
+    <hr class="my-5">
     <div>
         {{#with program.[1]}}
         {{> title data=name big=false}}
             <div><ins> to {{type}} for {{duration}} days</ins></div>
-            <br>
-            <div>                
+            <div class="my-5">                
             {{#with details}}
                 <div><i>Details:</i></div>
                 <ul>
@@ -81,8 +71,7 @@
                         </div>
                         {{/with}}
                     </li>
-                    <br>
-                    <li>
+                    <li class="my-4">
                         <div>Performers:</div>
                         {{#each performers}}
                         <ul>
@@ -90,7 +79,6 @@
                         </ul>
                         {{/each}}
                     </li>
-                    <br>
                     <li>
                         {{#with guide}}
                         <div>GUIDE: <b>{{name}}</b> , ({{rating}})</div>
@@ -100,7 +88,6 @@
                 </ul>
             {{/with}}
             </div>
-            <br>
         {{/with}}
     </div>
 {{/with}}

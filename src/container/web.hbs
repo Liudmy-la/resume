@@ -2,18 +2,16 @@
 {{#with web}}
 {{> title data="Languages" big=true}}
 {{#each languages}}
-<br><hr><br>
+<hr class="my-5">
     {{> title data=name big=false}}
     <div><big>Version: {{version}}</big></div>
-    <blockquote>{{description}}</blockquote>
-    <br>    
+    <blockquote>{{description}}</blockquote> 
     {{#each elements}}    
-    <ul>
+    <ul class="mt-5">
         <li>
             <div>Element: <b>{{name}}</b></div>
             <div><i>{{description}}</i></div>
-            <br>
-            <div>Attributes:
+            <div class="mt-5">Attributes:
                 {{#each attributes}}
                 <ul>
                     <li><b>{{name}}</b> - {{description}}</li>
@@ -28,8 +26,7 @@
         <li>
             <div>Property: <b>{{name}}</b></div>
             <div><i>{{description}}</i></div>
-            <br>
-            <div>Values:
+            <div class="mt-5">Values:
                 {{#each values}}
                 <ul>
                     <li><b>{{value}}</b> - {{description}}</li>
@@ -44,8 +41,7 @@
         <li>
             <div>Function: <b>{{name}}</b></div>
             <div><i>{{description}}</i></div>
-            <br>
-            <div>Parameters:
+            <div class="mt-5">Parameters:
                 {{#each parameters}}
                 <ul>
                     <li>                        

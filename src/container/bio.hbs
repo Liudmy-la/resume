@@ -1,34 +1,26 @@
 <main>
     {{> title data="Personal Info" big=true}}
     <div><b>{{name}}</b></div>
-    <br>
-    <div><i>Occupation:</i> {{occupation}}</div>
-    <br>
+    <div  class="my-5"><i>Occupation:</i> {{occupation}}</div>
     <div> Was born in {{birthdate}} in {{birthplace}}.</div>
     <div> Was died in {{deathdate}} in {{deathplace}}.</div>
-    <br>
-    <div><i>Nationality:</i> {{nationality}}</div>
-    <br>
+    <div  class="mt-5"><i>Nationality:</i> {{nationality}}</div>
     <hr>
-    <br>
     {{> title data="Known for" big=true}}
-    <div>
+    <div  class="my-5">
         {{#each known_for}}
         <ul><li> {{this}} </li></ul>
         {{/each}}
     </div>
-    <br>
     {{> title data="Quotes:" big=false}}
         <div>
         {{#each quotes}}
         <ul><li><q> {{this}} </q></li></ul>
         {{/each}}
     </div>
-    <br>
-    <hr>
-    <br>
+    <hr  class="my-5">
     <div><b>Education:</b></div>
-    <div>
+    <div  class="mb-5">
         {{#each education}}
         <ul>
             <li>
@@ -39,31 +31,25 @@
         </ul>
         {{/each}}
     </div>
-    <br>
-    <br>
-    <div><b>Under Influences:</b></div>
+    <div  class="mt-5"><b>Under Influences:</b></div>
     <div>
         {{#each influences}}
         <ul><li> {{this}} </li></ul>
         {{/each}}
     </div>
-    <br>
-    <div><b>Influenced Others:</b></div>
+    <div class="mt-5"><b>Influenced Others:</b></div>
     <div>
         {{#each influenced}}
         <ul><li> {{this}} </li></ul>
         {{/each}}
     </div>
-    <br>
-    <div><b>Life Partners:</b></div>
+    <div class="mt-5"><b>Life Partners:</b></div>
     <div>
         {{#each partners}}
             <ul><li>{{name}} - {{relationship}} ({{years}}) </li></ul>
         {{/each}}
     </div>
-    <br>
-    <hr>
-    <br>
+    <hr class="mt-5">
     {{> title data="Results" big=false}}
     <div><b>Notable Publications:</b></div>
     <div>
@@ -74,8 +60,7 @@
         </ul>
         {{/each}}
     </div>
-    <br>
-    <div><b>Major Discoveries:</b></div>
+    <div class="mt-5"><b>Major Discoveries:</b></div>
     <div>
         {{#each major_discoveries}}
         <ul>
@@ -85,8 +70,7 @@
         </ul>
         {{/each}}
     </div>
-    <br>
-    <div><b>Awards:</b></div>
+    <div class="mt-5"><b>Awards:</b></div>
     <div>
         {{#each awards}}
         <ul>
@@ -96,8 +80,7 @@
         </ul>
         {{/each}}
     </div>
-    <br>
-    <div><b>Contributions:</b></div>
+    <div class="mt-5"><b>Contributions:</b></div>
     <div>
         {{#with contributions}}
         <ul>

@@ -2,15 +2,14 @@
     {{> title data=name big=true}}
     <p>{{description}}</p>
     <div>{{#with history}} Was found in {{year}} by {{founder}} {{/with}}</div>
-<br><hr><br>
+<hr class="my-5">
     <div>
         {{> title data='Types' big=false}}        
         {{#each types}}
         <ul><li>{{this}}</li></ul>
         {{/each}}
     </div>
-    <br>
-    <div>
+    <div class="mt-5">
         {{> title data='Syntax' big=false}}
         {{#with syntax}}
             <div class="accordion" id="accordionExample">
@@ -58,11 +57,11 @@
                 </div>
                 <div class="accordion-item">
                 <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                     Loops
                 </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         {{#each loops}}
                         <ul><li>{{this}}</li></ul>
@@ -72,11 +71,11 @@
                 </div>
                 <div class="accordion-item">
                 <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                     Classes
                 </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         {{#each classes}}
                         <ul><li>{{this}}</li></ul>
@@ -87,35 +86,32 @@
             </div>
         {{/with}}
     </div>
-    <br>
-    <div>
+    <div class="mt-5">
         {{> title data='Features' big=false}}        
         {{#each features}}
         <ul><li>{{this}}</li></ul>
         {{/each}}
     </div>
-<br><hr><br>
+<hr class="my-5">
     <div>
         {{> title data='Libraries' big=false}}
        {{#each libraries}}
        <ul><li>{{this}}</li></ul>
        {{/each}}
     </div>
-    <br>
-    <div>
+    <div class="mt-5">
         {{> title data='Tools' big=false}}
         {{#each tools}}
         <ul><li>{{this}}</li></ul>
         {{/each}}
 </object>
     </div>
-<br><hr><br>
+<hr class="my-5">
     <div>
         {{> title data='Community' big=false}}
         {{#each community}}
         <ul><li><i>{{type}}:</i> {{name}}</li></ul>
         {{/each}}
     </div>
-    <br>
 </main>
 
