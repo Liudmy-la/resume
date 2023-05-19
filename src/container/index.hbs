@@ -1,21 +1,25 @@
-{{!-- 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- --}}
-
-<div class="p-5">
-    <h1>MY Practical Tasks</h1>
-
-    <button type="button" class="btn btn-success">To succeed</button>
-</div>
-
-<hr>
-
-{{> nav}}
-<br>
+<main>    
+    <div>
+        <div class="h3 mt-5">Pages' List</div>
+        <div class="ps-4"><i><big>"It almost doesn't matter what you know. Execution is what matters the most."</big></i></div>
+    </div>
 
 
-{{!-- 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
---}}
+    <div class="row mt-5">
+        {{#each buttons}}
+            <div class="col-3">
+                <div class="flex-column">
+                {{#each this}}
+                    <div>
+                        <a href="{{href}}" class="btn
+                        {{#if isSecondary}} btn-secondary {{else}} btn-primary {{/if}}
+                        {{#if isSuccess}} btn-success {{/if}}
+                         mb-3">{{name}}</a>
+                    </div>                    
+                {{/each}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+</main>

@@ -44,7 +44,100 @@ router.get('/', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {
     page: 'My Pet Project',
-    layout: 'basic',
+    layout: 'index',
+    page: 'Resume project',
+    buttons: [
+      [
+        { name: 'Resume - Summary', href: '/summary' },
+        { name: 'Resume - Skills', href: '/skills' },
+        { name: 'Resume - Education', href: '/education' },
+        { name: 'Resume - Work', href: '/work' },
+      ],
+      [
+        {
+          name: 'Practice - person',
+          href: '/person',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - bio ',
+          href: '/bio',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - program',
+          href: '/program',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - web',
+          href: '/web',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - js',
+          href: '/js',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - car',
+          href: '/car',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - mac',
+          href: '/mac',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - facebook',
+          href: '/facebook',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - Task 2.1',
+          href: '/task21',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - Task 2.2',
+          href: '/task22',
+          isSecondary: true,
+        },
+        {
+          name: 'Practice - Task 3.1',
+          href: '/task31',
+          isSecondary: true,
+        },
+      ],
+      [
+        {
+          name: 'Shop Home',
+          href: '/shophome',
+          isSuccess: true,
+        },
+        {
+          name: 'Shop Order',
+          href: '/shoporder',
+          isSuccess: true,
+        },
+        {
+          name: 'Shop Cart',
+          href: '/shopcart',
+          isSuccess: true,
+        },
+        {
+          name: 'Shop Review',
+          href: '/shopreview',
+          isSuccess: true,
+        },
+        {
+          name: 'Shop Catalog',
+          href: '/shopcatalog',
+          isSuccess: true,
+        },
+      ],
+    ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
@@ -56,9 +149,7 @@ router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
     // ↙ сюди вводимо JSON дані
-    page: {
-      title: 'Resume | Summary',
-    },
+    page: 'Resume | Summary',
     header,
     main: {
       summary: {
@@ -80,9 +171,7 @@ router.get('/summary', function (req, res) {
     //             ↙ cюди вводимо назву файлу з сontainer
     res.render('skills', {
       // ↙ сюди вводимо JSON дані
-      page: {
-        title: 'Resume | Skills',
-      },
+      page: 'Resume | Skills',
       header,
       main: {
         skills: [
@@ -150,10 +239,8 @@ router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
     // ↙ сюди вводимо JSON дані
-    page: {
-      title: 'Resume | Education',
-    },
-    header,
+    page: 'Resume | Education',
+
     main: {
       educations: [
         {
@@ -204,10 +291,8 @@ router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
     // ↙ сюди вводимо JSON дані
-    layout: 'big',
-    page: {
-      title: 'Resume | Work',
-    },
+    layout: 'basic',
+    page: 'Resume | Work',
     header,
     main: {
       works: [

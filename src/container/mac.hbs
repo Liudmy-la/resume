@@ -1,12 +1,11 @@
 <main>
     {{> title data=name big=true}}
     <div><i>{{category}}</i></div>
-    <div><i><big>{{description}}</big></i></div>
-    <br>
+    <div class="mb-5"><i><big>{{description}}</big></i></div>
     <div class="d-grid gap-2">
         <button class="btn btn-success" type="button"><big>Buy now: {{price}}</big></button>
     </div>
-    <br><hr><br>
+    <hr class="my-5">
     {{#with features}}
         <div>
             {{#with dimensions}}
@@ -18,11 +17,9 @@
             </ul>
             {{/with}}
         </div>
-    <br><hr><br>   
-    {{> title data="Features" big=false}}    
-    <br>
-    <div>Operating system: <b>{{operating_system}}</b></div>
-    <br>
+    <hr class="my-5"> 
+    {{> title data="Features" big=false}}
+    <div class="my-5">Operating system: <b>{{operating_system}}</b></div>
     <div>        
         <table class="table table-striped-columns">
             <tr align="center" bgcolor="#9cd5ba"> 
@@ -62,9 +59,8 @@
                     {{/with}}
                 </td>     
             </tr>
-        </table>      
-    <br>
-    <div>
+        </table>
+    <div class="my-5">
         <p><big><b>Ports:</b></big></p>
         {{#each ports}}
         <ul>
@@ -79,8 +75,7 @@
             </li>
         </ul>
         {{/each}}
-    </div>    
-<br>    
+    </div>
     <div>
         <p><big><b>Display:</b></big></p>
         {{#with display}}
@@ -101,7 +96,7 @@
             </ul>
         {{/with}}
     </div>
-<br><hr><br> 
+<hr class="my-5">
  
         <div>
             {{> title data="Accessories" big=false}}
